@@ -1,0 +1,135 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bookmark Manager</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #1a1a1a;
+      color: #e0e0e0;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    h2 {
+      color: #bb86fc;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      background-color: #2d2d2d;
+      border: 1px solid #444;
+      border-radius: 4px;
+      color: #e0e0e0;
+      font-size: 16px;
+    }
+    
+    input:focus {
+      outline: none;
+      border-color: #bb86fc;
+    }
+    
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #bb86fc;
+      color: #121212;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 16px;
+      margin-top: 10px;
+      transition: background-color 0.3s;
+    }
+    
+    button:hover {
+      background-color: #9d65d4;
+    }
+    
+    .data-box {
+      background-color: #2d2d2d;
+      border-radius: 6px;
+      padding: 15px;
+      margin: 20px 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    
+    .data-box h3 {
+      color: #03dac6;
+      margin-top: 0;
+      border-bottom: 1px solid #444;
+      padding-bottom: 8px;
+    }
+    
+    #data, #urldata {
+      word-wrap: break-word;
+      color: #e0e0e0;
+      margin: 10px 0;
+      font-size: 16px;
+    }
+    
+    .form-container {
+      background-color: #252525;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .que{
+      color: #03dac6;
+    }
+    #clearBtn {
+  background-color: #ff5555;
+  color: white;
+  margin-top: 10px;
+}
+
+#clearBtn:hover {
+  background-color: #cc4444;
+}
+
+
+  </style>
+</head>
+<body>
+
+  <h2> Bookmark Manager</h2>
+
+  
+  <div class="form-container">
+    <input type="text" id="text" name="bookmarkName" placeholder="Enter bookmark name" required>
+    <input type="url" id="url" name="bookmarkURL" placeholder="Enter bookmark URL (https://...)" required>
+    <button type="submit" onclick="submit()">Add Bookmark</button>
+    <button id="clearBtn" onclick="clearAll()">Clear All</button>
+  </div>
+  
+  <div class="data-box">
+    <h3>Bookmark Data</h3>
+    <div id="data"></div>
+  </div>
+  
+  <div class="data-box">
+    <h3>URL Data</h3>
+    <div id="urldata"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script src="app.js"></script>
+ 
+        
+     
+  
+</body>
+</html>
+
+
+
